@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import './contactItem.css'
 export default class contactItem extends Component {
     getStyle = () => {
         return {
@@ -16,7 +16,7 @@ export default class contactItem extends Component {
     render() {
         const {id, Name, Phone} = this.props.contact
         return (
-            <div style={this.getStyle()}>
+            <div style={this.getStyle()} className = "contact">
                 <button style={crossRed} onClick={this.props.getDeleted.bind(this, id)}>X</button>
                 <img width="100px" height="100px" src= {require('./contact.png')}></img>
                 <h2 style={showStatus}>{Name}</h2>
